@@ -3,111 +3,377 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9ac74e04c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
-    <section>
+    <section id="landing">
       <nav>
-        <img src="./Assets/FES.svg" class="logo" alt="" />
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#discord">Discord</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav_container">
+          <img src="./assets/Library.svg" class="logo" alt="" />
+          <ul class="nav_links">
+            <li><a href="" class="nav_link">Home</a></li>
+            <li><a href="" class="nav_link">Contact</a></li>
+            <li><a href="" class="nav_link nav_link-primary">Books</a></li>
+          </ul>
+          <button class="btn_menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu_backdrop">
+            <button class="btn_menu btn_menu-close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu_links">
+              <li class="menu_list">
+                <a
+                  href="#landing"
+                  class="menu_link link_hover-effect link_hover-effect--white"
+                  onclick="closeMenu()"
+                  >Home</a
+                >
+              </li>
+              <li class="menu_list">
+                <a
+                  href="#featured"
+                  class="menu_link link_hover-effect link_hover-effect--white"
+                  onclick="closeMenu()"
+                  >Books</a
+                >
+              </li>
+              <li class="menu_list">
+                <a
+                  href=""
+                  class="menu_link no-cursor link_hover-effect link_hover-effect--white"
+                  onclick="closeMenu()"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <header>
-        <div class="row">
-          <div class="home_description">
-            <h1>Best place to learn Frontend</h1>
-            <p class="subheader">
-              Go from absolute beginner to pro with a simplified process
-            </p>
-            <button class="home_button">Start now</button>
+        <div class="header_container">
+          <div class="header_description">
+            <h1 class="purple">
+              America's most awarded online library platform
+            </h1>
+            <h2>
+              Find your dream book with <span class="purple">library</span>
+            </h2>
+            <button><a href="#recent" class="btn">Explore Books</a></button>
           </div>
-          <figure>
-            <img src="./Assets/laptop.png" alt="Home page image" />
+          <figure class="header_img-wrapper">
+            <img src="./assets/Undraw_Books.svg" class="header_img" alt="" />
           </figure>
         </div>
       </header>
     </section>
 
     <main>
-      <section id="about">
-        <h2>About</h2>
-        <div class="row">
-          <div class="section_description">
-            <div class="section__description">
-              <p class="sd_para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti placeat molestiae dicta ipsa non deleniti provident,
-                fugiat obcaecati dolor reiciendis id qui nulla velit soluta eum
-                illo reprehenderi.
-              </p>
-              <p class="sd_para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti placeat molestiae dicta ipsa non deleniti provident,
-                fugiat obcaecati dolor reiciendis id qui nulla velit soluta eum
-                illo reprehenderi.
-              </p>
-            </div>
-            <figure class="about_img">
-              <img src="./Assets/about.jpg" alt="" />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section id="discord">
-        <h2>Discord</h2>
-        <div class="row">
-          <div class="section_description">
-            <figure class="about_img">
-              <img src="./Assets/discord.png" alt="Discord" />
-            </figure>
-            <div class="section__description">
-              <p class="sd_para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                laudantium dolor quia laborum eos modi tempora, ea sed nemo odit
-                nam odio dolores nisi recusandae id natus blanditiis saepe
-                suscipit.
-              </p>
-              <p class="sd_para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                laudantium dolor quia laborum eos modi tempora, ea sed nemo odit
-                nam odio dolores nisi recusandae id natus blanditiis saepe
-                suscipit.
-              </p>
+      <img src="./assets/wave.svg" class="wave" alt="" />
+      <section id="highlights">
+        <div class="container highlights_container">
+          <div class="row">
+            <h2 class="section_title">
+              Why choose <span class="purple">Library?</span>
+            </h2>
+            <div class="highlight_wrapper">
+              <div class="highlight">
+                <div class="highlight_img">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="highlight_subtitle">Easy and Quick</h3>
+                <p class="highlight_para">
+                  Get Access to the book you purchased online instantly
+                </p>
+              </div>
+              <div class="highlight">
+                <div class="highlight_img">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="highlight_subtitle">10,000+ Books</h3>
+                <p class="highlight_para">
+                  Library has books in all of your favorite categories
+                </p>
+              </div>
+              <div class="highlight">
+                <div class="highlight_img">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <h3 class="highlight_subtitle">Affordable</h3>
+                <p class="highlight_para">
+                  Get your hands on popular books for as little as $10
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <form action="">
-          <span>Email</span>
-          <input type="email" placeholder="jane@example.com" />
-          <span>Message</span>
-          <textarea
-            type="text"
-            placeholder="Cool website, lets get connected"
-          ></textarea>
-          <button>Contact Us!</button>
-        </form>
+      <section id="featured">
+        <img src="./assets/wave.svg" class="wave_bottom" alt="" />
+        <div class="container">
+          <div class="row">
+            <h2 class="section_title">
+              Featured <span class="purple">Books</span>
+            </h2>
+            <div class="books">
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img
+                    src="./assets/crack the coding interview.png"
+                    class="book_img"
+                    alt=""
+                  />
+                </figure>
+                <div class="book_title">Crack the Coding Interview</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">
+                  <span class="book_price-normal">$59.95</span> 14.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img
+                    src="./assets/atomic habits.jpg"
+                    class="book_img"
+                    alt=""
+                  />
+                </figure>
+                <div class="book_title">Atomic Habits</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">
+                  <span class="book_price-normal">$39.95</span> 12.95
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img
+                    src="./assets/david goggins.jpeg"
+                    class="book_img"
+                    alt=""
+                  />
+                </figure>
+                <div class="book_title">Can't Hurt Me</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">$28.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/deep work.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">Deep Work</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">
+                  <span class="book_price-normal">$39.95</span> 22.95
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recent">
+        <div class="container">
+          <div class="row">
+            <h2 class="section_title">
+              Latest <span class="purple">Books</span>
+            </h2>
+            <div class="recent_books">
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-1.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">The 10x Rule</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">14.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-2.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">Be Obsessed or Be Average</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">12.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-3.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">Rich Dad Poor Dad</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">$28.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-4.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">Cashflow Quadrant</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">22.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-5.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">Power</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">22.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-6.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">The 5 Second Rule</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">22.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-7.jpg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">Your Next Five Moves</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">22.95</div>
+              </div>
+              <div class="book">
+                <figure class="book_img-wrapper">
+                  <img src="./assets/book-8.jpeg" class="book_img" alt="" />
+                </figure>
+                <div class="book_title">Mastery</div>
+                <div class="book_ratings">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="book_price">22.95</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="explore">
+        <div class="container">
+          <div class="row">
+            <h2>Explore more <span class="purple">books</span></h2>
+            <div class="button_wrapper">
+              <button>
+                <a href="#featured" class="explore_button">Browse books</a>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <img class="footer_logo" src="./Assets/FES.svg" alt="" />
-      <div class="footer_links">
-        <a class="footer_link" href="#about">About</a>
-        <a class="footer_link" href="#discord">Discord</a>
-        <a class="footer_link" href="#Contact">Contact</a>
-        <a class="footer_link" href="">Courses</a>
+      <div class="row footer_row">
+        <a href="#" class="footer_anchor">
+          <figure class="footer_logo">
+            <img src="./assets/Library.svg" class="footer_logo-img" alt="" />
+          </figure>
+        </a>
+        <div class="footer_social-list">
+          <a
+            href="#landing"
+            class="footer_social-link link_hover-effect link_hover-effect--white"
+            >Home</a
+          >
+          <a
+            href="#highlights"
+            class="footer_social-link link_hover-effect link_hover-effect--white"
+            >About</a
+          >
+          <a
+            href="#featured"
+            class="footer_social-link link_hover-effect link_hover-effect--white"
+            >Books</a
+          >
+          <a
+            href="mailto:Emmanuel.rodriguez52303@gmail.com"
+            class="footer_social-link link_hover-effect link_hover-effect--white"
+            target="_blank"
+            >Contact</a
+          >
+        </div>
+        <div class="footer_copyright">Copyright © 2025 Library</div>
       </div>
-      <p>Copyright Frontend Simplified</p>
     </footer>
   </body>
 </html>
